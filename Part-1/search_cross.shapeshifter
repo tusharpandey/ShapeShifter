@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "layers": {
+    "vectorLayer": {
+      "id": "56",
+      "name": "circle_movement",
+      "type": "vector",
+      "width": 16,
+      "height": 16,
+      "children": [
+        {
+          "id": "57",
+          "name": "circle_upper",
+          "type": "path",
+          "pathData": "M 9 9 C 9.791 8.204 10.235 7.125 10.233 6.003 C 10.231 4.88 9.784 3.803 8.991 3.009 C 8.197 2.216 7.12 1.769 5.997 1.767 C 4.875 1.765 3.796 2.209 3 3",
+          "strokeColor": "#000000",
+          "strokeWidth": 1.5,
+          "strokeLinecap": "round"
+        },
+        {
+          "id": "58",
+          "name": "circle_lower",
+          "type": "path",
+          "pathData": "M 3 3 C 2.209 3.796 1.765 4.875 1.767 5.997 C 1.769 7.12 2.216 8.197 3.009 8.991 C 3.803 9.784 4.88 10.231 6.003 10.233 C 7.125 10.235 8.204 9.791 9 9",
+          "strokeColor": "#000000",
+          "strokeWidth": 1.5
+        },
+        {
+          "id": "59",
+          "name": "line",
+          "type": "path",
+          "pathData": "M 13 13 L 9 9",
+          "fillColor": "#000000",
+          "strokeColor": "#000000",
+          "strokeWidth": 1.5,
+          "strokeLinecap": "round"
+        },
+        {
+          "id": "60",
+          "name": "line2",
+          "type": "path",
+          "pathData": "M 3 13",
+          "fillColor": "#00000000",
+          "strokeColor": "#00000000",
+          "strokeWidth": 1.5,
+          "strokeLinecap": "round"
+        }
+      ]
+    },
+    "hiddenLayerIds": []
+  },
+  "timeline": {
+    "animation": {
+      "id": "61",
+      "name": "anim",
+      "duration": 1300,
+      "blocks": [
+        {
+          "id": "62",
+          "layerId": "57",
+          "propertyName": "trimPathStart",
+          "startTime": 0,
+          "endTime": 500,
+          "interpolator": "LINEAR",
+          "type": "number",
+          "fromValue": 0,
+          "toValue": 1
+        },
+        {
+          "id": "63",
+          "layerId": "59",
+          "propertyName": "pathData",
+          "startTime": 500,
+          "endTime": 800,
+          "interpolator": "ACCELERATE",
+          "type": "path",
+          "fromValue": "M 13 13 L 10 10 L 9 9",
+          "toValue": "M 13 13 L 9 9 L 3 3"
+        },
+        {
+          "id": "64",
+          "layerId": "60",
+          "propertyName": "pathData",
+          "startTime": 800,
+          "endTime": 1300,
+          "interpolator": "LINEAR",
+          "type": "path",
+          "fromValue": "M 3 13 L 3 13",
+          "toValue": "M 3 13 L 13 3"
+        },
+        {
+          "id": "66",
+          "layerId": "58",
+          "propertyName": "trimPathStart",
+          "startTime": 500,
+          "endTime": 800,
+          "interpolator": "DECELERATE",
+          "type": "number",
+          "fromValue": 0,
+          "toValue": 1
+        },
+        {
+          "id": "67",
+          "layerId": "58",
+          "propertyName": "pathData",
+          "startTime": 500,
+          "endTime": 800,
+          "interpolator": "ACCELERATE",
+          "type": "path",
+          "fromValue": "M 3 3 C 2.209 3.796 1.765 4.875 1.767 5.997 C 1.769 7.12 2.216 8.197 3.009 8.991 C 3.803 9.784 4.88 10.231 6.003 10.233 C 7.125 10.235 8.204 9.791 9 9",
+          "toValue": "M -6 -6 C -7.187 -4.806 -7.852 -3.188 -7.85 -1.504 C -7.847 0.18 -7.176 1.795 -5.986 2.986 C -4.795 4.176 -3.18 4.847 -1.496 4.85 C 0.188 4.852 1.806 4.187 3 3"
+        },
+        {
+          "id": "2546",
+          "layerId": "60",
+          "propertyName": "strokeColor",
+          "startTime": 800,
+          "endTime": 801,
+          "interpolator": "LINEAR",
+          "type": "color",
+          "fromValue": "#00000000",
+          "toValue": "#000000"
+        }
+      ]
+    }
+  }
+}
